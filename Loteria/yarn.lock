@@ -3422,6 +3422,11 @@
   "resolved" "https://registry.npmjs.org/junk/-/junk-3.1.0.tgz"
   "version" "3.1.0"
 
+"kafkajs@^2.1.0":
+  "integrity" "sha512-6IYiOdGWvFPbSbVB+AV3feT+A7vzw5sXm7Ze4QTfP7FRNdY8pGcpiNPvD2lfgYFD8Dm9KbMgBgTt2mf8KaIkzw=="
+  "resolved" "https://registry.npmjs.org/kafkajs/-/kafkajs-2.1.0.tgz"
+  "version" "2.1.0"
+
 "keyv@^4.0.0":
   "integrity" "sha512-kn8WmodVBe12lmHpA6W8OY7SNh6wVR+Z+wZESF4iF5FCazaVXGWOtnbnvX0tMQ1bO+/TmOD9LziuYMvrIIs0xw=="
   "resolved" "https://registry.npmjs.org/keyv/-/keyv-4.3.2.tgz"
