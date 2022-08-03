@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    container_name: bet-db
+    container_name: loteria-db
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
@@ -14,7 +14,7 @@ services:
 
   api:
     build: .
-    container_name: bet-api
+    container_name: loteria-api
     restart: unless-stopped
     volumes:
       - .:/user/app/

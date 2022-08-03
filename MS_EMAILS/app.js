@@ -1,20 +1,11 @@
-"use strict"
+const runSendNewBetEmail = require('./consumers/send_new_bet_email')
+const runSendAdminNewBetEmail = require('./consumers/send_admin_new_bet_email')
+const runLetBetUsEmail = require('./consumers/send_let_bet_us_email')
+const runResetPasswordEmail = require('./consumers/send_reset_password_email')
+const runSendWelcomeEmail = require('./consumers/send_welcome_email')
 
-const { Kafka } = require('kafkajs')
-
-const kafka = new Kafka({
-    clientId: 'client',
-    brokers: ['kafka:9092'],
-})
-
-const express = require('express')
-const app = express()
-const port = 3000
-
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+runSendNewBetEmail().catch(console.error)
+runSendAdminNewBetEmail().catch(console.error)
+runLetBetUsEmail().catch(console.error)
+runResetPasswordEmail().catch(console.error)
+runSendWelcomeEmail().catch(console.error)
