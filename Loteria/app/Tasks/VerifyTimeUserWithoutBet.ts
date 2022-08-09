@@ -40,7 +40,7 @@ export default class VerifyTimeUserWithoutBet extends BaseTask {
 
               if (newDateMoreThan7days < currentDate) {
                 try {
-                  await sendMail(user, 'email/let_bet_us')
+                  await sendMail(user, 'We miss you! Let bet us!', 'let_bet_us_email')
                   return Logger.info('Success in send email')
                 } catch (error) {
                   return Logger.error('Error in send email')

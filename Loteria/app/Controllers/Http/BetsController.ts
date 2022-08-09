@@ -60,7 +60,7 @@ export default class BetsController {
     }
 
     try {
-      await sendMail(user, 'email/new_bet')
+      await sendMail(user, 'Thank you for your bet!', 'send_new_bet_email')
     } catch (error) {
       trx.rollback()
       return response.badRequest({
