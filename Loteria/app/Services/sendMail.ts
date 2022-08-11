@@ -10,7 +10,10 @@ const kafka = new Kafka({
   }
 })
 
-const producer = kafka.producer()
+const producer = kafka.producer({
+  allowAutoTopicCreation: true,
+  transactionTimeout: 30000
+})
 
 export async function sendMail(user: User, subject: string, topic: string, info?: {}): Promise<void> {
   await producer.connect()

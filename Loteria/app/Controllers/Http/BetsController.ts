@@ -5,6 +5,7 @@ import Cart from 'App/Models/Cart'
 
 import User from 'App/Models/User'
 import { sendMail } from 'App/Services/sendMail'
+import { smToAdm } from 'App/Services/smToAdm'
 import BetValidator from 'App/Validators/BetValidator'
 
 export default class BetsController {
@@ -61,6 +62,7 @@ export default class BetsController {
 
     try {
       await sendMail(user, 'Thank you for your bet!', 'send_new_bet_email')
+      await smToAdm(user)
     } catch (error) {
       trx.rollback()
       return response.badRequest({

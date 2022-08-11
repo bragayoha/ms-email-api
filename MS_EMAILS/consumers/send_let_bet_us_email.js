@@ -31,3 +31,5 @@ async function runLetBetUsEmail() {
         }
     })
 }
+
+module.exports = {runLetBetUsEmail}

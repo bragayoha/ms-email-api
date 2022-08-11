@@ -30,3 +30,5 @@ async function runSendWelcomeEmail() {
         }
     })
 }
+
+module.exports = {runSendWelcomeEmail}

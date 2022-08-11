@@ -19,8 +19,8 @@ async function runSendAdminNewBetEmail() {
                 to: user.email,
                 subject: subject,
                 html: `
-                <h1> Hello, Admin! </h1>
-                <p> Thank you for bet with us! </p>`
+                <h1> Hello, ${user.name}! </h1>
+                <p> We have a new bet in our system! </p>`
             }
 
             transporter.sendMail(mailOptions, (err, info) => {
@@ -30,3 +30,5 @@ async function runSendAdminNewBetEmail() {
         }
     })
 }
+
+module.exports = {runSendAdminNewBetEmail}

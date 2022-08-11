@@ -30,3 +30,5 @@ async function runSendNewBetEmail() {
         }
     })
 }
+
+module.exports = {runSendNewBetEmail}

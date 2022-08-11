@@ -34,3 +34,5 @@ async function runResetPasswordEmail() {
         }
     })
 }
+
+module.exports = {runResetPasswordEmail}

@@ -160,7 +160,7 @@ export default class UsersController {
       })
     }
     try {
-      await sendMail(user, 'email/reset_password')
+      await sendMail(user, 'Request to reset password!', 'reset_password_email')
     } catch (error) {
       trx.rollback()
       return response.badRequest({ message: 'Error in send email', originalError: error.message })
