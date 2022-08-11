@@ -67,7 +67,7 @@ export default class UsersController {
     }
 
     try {
-      await sendMail(user, 'email/welcome')
+      await sendMail(user, 'Welcome to the Best Lottery System!', 'send_welcome_email')
     } catch (error) {
       trx.rollback()
       return response.badRequest({
