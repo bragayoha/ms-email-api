@@ -12,7 +12,7 @@ async function runSendAdminNewBetEmail() {
 
     await consumer.run({
         eachMessage: async ({message}) => {
-            const {user, subject, info} = JSON.parse(message.value)
+            const {user, subject} = JSON.parse(message.value)
 
             const mailOptions = {
                 from: 'loterysystem@email.com',

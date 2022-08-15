@@ -23,7 +23,7 @@ async function runResetPasswordEmail() {
 
                 <p> You requested to reset your password.
 
-                Your token is: ${user.rememberMeToken}
+                Your token is: AAj${Math.random(15)*10+8}YkhsA${Math.random(28)*10+5}
                 </p>`
             }
 
